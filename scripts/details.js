@@ -2,15 +2,13 @@ const queryString = location.search;
 
 let parametros = new URLSearchParams(queryString);
 
-let idExtraidoUrl = parametros.get("_id");
+let idExtraidoUrl = parametros.get("id");
 
-const eventoD = infoEventos.events.find(event => event.id == idExtraidoUrl);
+const eventoD = infoEventos.events.find(event => event._id == idExtraidoUrl);
 
 const contenedorCards = document.getElementById("divDetails");
 
-contenedorCards.innerHTML =
-
-    `<div class="container details" id="divDetails">
+contenedorCards.innerHTML =  `<div class="container details" id="divDetails">
 
     <div class="row justify-content-center ">
 

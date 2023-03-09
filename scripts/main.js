@@ -13,7 +13,7 @@ function tarjetas(info) {
                         <h5 class="card-title">${evento.name}</h5>
                         <p class="card-text mb-4">${evento.description}</p>
                         <p>Price $ ${evento.price}
-                            <a href="./details.html" class="btn btn-primary ms-4">See more</a>
+                            <a href="./details.html?id=${evento._id}" class="btn btn-primary ms-4">See more</a>
                         </p>
                     </div>
                 </div>`
