@@ -24,3 +24,18 @@ function tarjetas(info) {
 let cards = tarjetas(infoEventos.events)
 contenedorCard.innerHTML = cards
 
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"][name="category"]');
+checkboxes.forEach(function (checkbox) {
+  checkbox.addEventListener('click', function () {
+    const selectedCategories = Array.from(checkboxes).filter(function (checkbox) {
+      return checkbox.checked;
+    }).map(function (checkbox) {
+      return checkbox.value;
+    });
+    const filteredData = data.filter(function (item) {
+      return selectedCategories.includes(item.category);
+    });
+    console.log(filteredData);
+  });
+});

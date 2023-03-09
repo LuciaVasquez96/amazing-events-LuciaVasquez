@@ -27,3 +27,4 @@ function tarjetas(info) {
 let cards = tarjetas(infoEventos.events)
 contenedorCard.innerHTML = cards
 
+
